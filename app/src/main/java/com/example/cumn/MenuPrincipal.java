@@ -23,36 +23,24 @@ public class MenuPrincipal extends AppCompatActivity {
         botonBiblio = findViewById(R.id.Bibliotecas);
         botonEventos = findViewById(R.id.Eventos);
 
-        botonOcio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentOcio = new Intent(MenuPrincipal.this, Ocio.class);
-                startActivity(intentOcio);
-            }
+        botonOcio.setOnClickListener(view -> {
+            Intent intentOcio = new Intent(MenuPrincipal.this, Ocio.class);
+            startActivity(intentOcio);
         });
 
-        botonDeportes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentDeportes = new Intent(MenuPrincipal.this, Deportes.class);
-                startActivity(intentDeportes);
-            }
+        botonDeportes.setOnClickListener(view -> {
+            Intent intentDeportes = new Intent(MenuPrincipal.this, Deportes.class);
+            startActivity(intentDeportes);
         });
 
-        botonBiblio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentBiblio = new Intent(MenuPrincipal.this, Bibliotecas.class);
-                startActivity(intentBiblio);
-            }
+        botonBiblio.setOnClickListener(view -> {
+            Intent intentBiblio = new Intent(MenuPrincipal.this, Bibliotecas.class);
+            startActivity(intentBiblio);
         });
 
-        botonEventos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentEventos = new Intent(MenuPrincipal.this, Eventos.class);
-                startActivity(intentEventos);
-            }
+        botonEventos.setOnClickListener(view -> {
+            Intent intentEventos = new Intent(MenuPrincipal.this, Eventos.class);
+            startActivity(intentEventos);
         });
     }
 }
