@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
                 startActivity(intent);
             }
-        }, 1000); // Espera un segundo antes de cambiar de pantalla
+        }, 2000); // Espera un segundo antes de cambiar de pantalla
     }
 }
