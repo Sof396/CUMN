@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CUMN">
         <activity
+            android:name=".masInfo"
+            android:exported="false" />
+        <activity
             android:name=".Eventos"
             android:exported="false" />
         <activity
