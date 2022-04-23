@@ -12,5 +12,11 @@ public class Ocio extends AppCompatActivity {
         setContentView(R.layout.activity_ocio);
 
         Toast.makeText(this, "Ocio" , Toast.LENGTH_LONG).show();
+        
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json")
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build();
     }
 }
