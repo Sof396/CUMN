@@ -18,7 +18,6 @@ public class MenuPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Toast.makeText(this, "Actividades" , Toast.LENGTH_LONG).show();
 
         botonOcio = findViewById(R.id.Ocio);
         botonDeportes = findViewById(R.id.Deportes);

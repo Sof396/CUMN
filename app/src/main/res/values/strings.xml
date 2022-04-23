@@ -4,5 +4,8 @@
     <string name="button">Button</string>
     <string name="elige_el_rea_de_tus_actividades">Elige el área de tus actividades</string>
     <string name="Ocio">Ocio</string>
+    <string name="Deportes">Deportes</string>
+    <string name="Bibliotecas">Bibliotecas</string>
+    <string name="Eventos">Eventos</string>
 
 </resources>
