@@ -31,17 +31,29 @@
             android:name=".masInfo"
             android:exported="false" />
         <activity
+            android:name=".Ocio"
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipal"/>
+
+        <activity
             android:name=".Eventos"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipal"/>
+
         <activity
             android:name=".Bibliotecas"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipal"/>
+
         <activity
             android:name=".Deportes"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MenuPrincipal"/>
+
         <activity
             android:name=".MenuPrincipal"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
