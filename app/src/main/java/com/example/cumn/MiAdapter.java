@@ -1,5 +1,6 @@
-/*package com.example.cumn;
+package com.example.cumn;
 
+import android.icu.text.CaseMap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,10 @@ import java.util.List;
 
 public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
 
+    private List<datos> datos;
 
-    public MiAdapter(List<Persona> datos) {
+
+    public MiAdapter(List<datos> datos) {
         this.datos = datos;
     }
 
@@ -25,7 +28,7 @@ public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
     public MiAdapter.MiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //// para devolver el xml de la fila
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row, parent, false);
+                .inflate(R.layout.fila, parent, false);
         MiViewHolder vh = new MiViewHolder(v);
         return vh;
     }
@@ -33,11 +36,8 @@ public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MiAdapter.MiViewHolder holder, int position) {
         //// rellenar los datos del layout
-        holder.nombre.setText(datos.get(position).getNombre());
-        holder.dni.setText(""+datos.get(position).getDni());
-
-        /// cargar la imagen
-        Picasso.get().load("https://www.etsisi.upm.es/sites/all/themes/zircon/images/UPM.png").into(holder.foto);
+        holder.titulo.setText(datos.get(position).getTitle());
+        holder.fecha.setText(datos.get(position).getDtstart());
     }
 
     @Override
@@ -46,18 +46,15 @@ public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
     }
 
     public class MiViewHolder extends RecyclerView.ViewHolder {
-        TextView nombre;
-        TextView dni;
-        ImageView foto;
+        TextView titulo;
+        TextView fecha;
 
         public MiViewHolder(@NonNull View itemView) {
             super(itemView);
             /// ajustar findview By ID
-            nombre = itemView.findViewById(R.id.txt_nombre);
-            dni = itemView.findViewById(R.id.txt_dni);
-            foto = itemView.findViewById(R.id.img_foto);
+            titulo = itemView.findViewById(R.id.titulo);
+            fecha = itemView.findViewById(R.id.fecha);
         }
     }
 }
 
- */

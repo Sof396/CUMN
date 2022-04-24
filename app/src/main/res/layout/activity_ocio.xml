@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="419dp"
-        android:layout_height="71dp"
+        android:layout_width="416dp"
+        android:layout_height="64dp"
         android:gravity="center"
         android:text="OCIO"
         android:textAlignment="center"
@@ -23,9 +23,9 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_actividades"
-        android:layout_width="413dp"
-        android:layout_height="682dp"
+        android:id="@+id/lista_actividades_Ocio"
+        android:layout_width="410dp"
+        android:layout_height="690dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

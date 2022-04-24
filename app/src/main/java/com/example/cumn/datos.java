@@ -10,11 +10,11 @@ public class datos {
 
     @SerializedName("title")
     @Expose
-    private Integer title;
+    private String title;
 
     @SerializedName("description")
     @Expose
-    private Integer description;
+    private String description;
 
     @SerializedName("longitude")
     @Expose
@@ -22,16 +22,19 @@ public class datos {
     @SerializedName("latitude")
     @Expose
     private Integer latitude;
+    @SerializedName("dtstart")
+    @Expose
+    private String dtstart;
 
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public void setTitle(Integer title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public void setDescription(Integer description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -42,16 +45,19 @@ public class datos {
     public void setLatitude(Integer latitude) {
         this.latitude = latitude;
     }
+    public void setDtstart(String dtstart) {
+        this.dtstart = dtstart;
+    }
 
     public Integer getId() {
         return id;
     }
 
-    public Integer getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public Integer getDescription() {
+    public String getDescription() {
         return description;
     }
 
@@ -61,5 +67,17 @@ public class datos {
 
     public Integer getLatitude() {
         return latitude;
+    }
+    public String getDtstart() {
+        return dtstart;
+    }
+
+    public datos(Integer id, String title, String description, Integer longitude, Integer latitude, String dtstart) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.dtstart = dtstart;
     }
 }
