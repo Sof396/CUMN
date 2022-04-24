@@ -31,8 +31,8 @@
 
     <Button
         android:id="@+id/masInfo"
-        android:layout_width="110dp"
-        android:layout_height="35dp"
+        android:layout_width="116dp"
+        android:layout_height="41dp"
         android:text="Mas info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
