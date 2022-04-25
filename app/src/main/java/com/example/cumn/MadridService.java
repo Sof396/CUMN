@@ -1,19 +1,17 @@
 package com.example.cumn;
 
+import retrofit2.http.GET;
+
+import com.example.cumn.datos.ocio.example.datosOcio;
+
 import java.util.List;
 
-import com.example.cumn.datos;
+import io.reactivex.Single;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-public class MadridService {
-        /*
-
-        @GET("catalogo/206974-0-agenda-eventos-culturales-100.json")
-                //Call<List<Repo>> listRepos(@Path("user") String user);
-        Call<String> listOcio();
-
-         */
-
+public interface MadridService {
+    @GET("egob/catalogo/206974-0-agenda-eventos-culturales-100.json")
+    Call<datosOcio> listActivities();
 }

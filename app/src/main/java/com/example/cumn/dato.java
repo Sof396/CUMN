@@ -3,7 +3,7 @@ package com.example.cumn;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class datos {
+public class dato {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -72,7 +72,7 @@ public class datos {
         return dtstart;
     }
 
-    public datos(Integer id, String title, String description, Integer longitude, Integer latitude, String dtstart) {
+    public dato(Integer id, String title, String description, Integer longitude, Integer latitude, String dtstart) {
         this.id = id;
         this.title = title;
         this.description = description;

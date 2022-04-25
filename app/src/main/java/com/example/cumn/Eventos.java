@@ -19,15 +19,26 @@ public class Eventos extends AppCompatActivity {
 
         Toast.makeText(this, "Eventos" , Toast.LENGTH_LONG).show();
 
-        List<datos> datosEventos = new ArrayList<>();  //lista de los datos que se obtengan de la API
+        List<dato> datosEventos = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
         for (int i=0; i<1000; i++) {
-            datos p = new datos(i, "Evento "+i, "evento cosas" , 53653, 732738732,"hddhdhd");
+            dato p = new dato(i, "Evento "+i, "evento cosas" , 53653, 732738732,"hddhdhd");
             datosEventos.add(p);
         }
 
 
-        MiAdapter ma = new MiAdapter(datosEventos);
+        MiAdapter ma = new MiAdapter(datosEventos, new ClickListener(){
+
+            @Override
+            public void onPositionClicked(int position) {
+                
+            }
+
+            @Override
+            public void onLongClicked(int position) {
+
+            }
+        });
 
         RecyclerView rv = findViewById(R.id.lista_actividades_Eventos);
         rv.setAdapter(ma);

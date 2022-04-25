@@ -19,10 +19,10 @@ public class Deportes extends AppCompatActivity {
 
         Toast.makeText(this, "Deportes" , Toast.LENGTH_LONG).show();
 
-        List<datos> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
+        List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
         for (int i=0; i<1000; i++) {
-            datos p = new datos(i, "Deportes"+i, "deporte cosas" , 53653, 732738732,"hddhdhd");
+            dato p = new dato(i, "Deportes"+i, "deporte cosas" , 53653, 732738732,"hddhdhd");
             datosDeportes.add(p);
         }
 

@@ -19,10 +19,10 @@ public class Bibliotecas extends AppCompatActivity {
 
         Toast.makeText(this, "Bibliotecas" , Toast.LENGTH_LONG).show();
 
-        List<datos> datosBibliotecas = new ArrayList<>();  //lista de los datos que se obtengan de la API
+        List<dato> datosBibliotecas = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
         for (int i=0; i<1000; i++) {
-            datos p = new datos(i, "Bibliotecas"+i, "bibliocosas" , 53653, 732738732,"hddhdhd");
+            dato p = new dato(i, "Bibliotecas"+i, "bibliocosas" , 53653, 732738732,"hddhdhd");
             datosBibliotecas.add(p);
         }
 
