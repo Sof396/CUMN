@@ -2,42 +2,107 @@ package com.example.cumn.model;
 
 import android.location.Location;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 //
 
 public class actividad {
 
+    @SerializedName("uid")
+    @Expose
     private String uid;
+    @SerializedName("dtend")
+    @Expose
     private String dtend;
+    @SerializedName("location")
+    @Expose
     private Location location;
+    @SerializedName("event-location")
+    @Expose
     private String eventLocation;
+    @SerializedName("link")
+    @Expose
     private String link;
+    @SerializedName("relation")
+    @Expose
     private String relation;
+    @SerializedName("id")
+    @Expose
     private String id;
+    @SerializedName("organization")
+    @Expose
     private Organization organization;
+    @SerializedName("title")
+    @Expose
     private String title;
+    @SerializedName("dtstart")
+    @Expose
     private String dtstart;
+    @SerializedName("references")
+    @Expose
     private String references;
+    @SerializedName("recurrence")
+    @Expose
     private Recurrence recurrence;
+    @SerializedName("price")
+    @Expose
     private String price;
+    @SerializedName("address")
+    @Expose
     private Address address;
+    @SerializedName("description")
+    @Expose
     private String description;
+    @SerializedName("excluded-days")
+    @Expose
     private String excludedDays;
 
     public class Location{
+        @SerializedName("longitude")
+        @Expose
         private double longitude;
+        @SerializedName("latitude")
+        @Expose
         private double latitude;
 
         public Location(double longitude, double latitude) {
             this.longitude = longitude;
             this.latitude = latitude;
         }
+
+        public double getLongitude() {
+            return longitude;
+        }
+
+        public void setLongitude(double longitude) {
+            this.longitude = longitude;
+        }
+
+        public double getLatitude() {
+            return latitude;
+        }
+
+        public void setLatitude(double latitude) {
+            this.latitude = latitude;
+        }
     }
 
     public class Organization{
+        @SerializedName("accesibility")
+        @Expose
         private String accesibility;
+        @SerializedName("services")
+        @Expose
         private String services;
+        @SerializedName("schedule")
+        @Expose
         private String schedule;
+        @SerializedName("organization-name")
+        @Expose
         private String organizationName;
+        @SerializedName("organization-desc")
+        @Expose
         private String organizationDesc;
 
         public Organization(String accesibility, String services, String schedule, String organizationName, String organizationDesc) {
