@@ -27,7 +27,7 @@ public class actividad {
         private double longitude;
         private double latitude;
 
-        public Location(double longitude, double latitude){
+        public Location(double longitude, double latitude) {
             this.longitude = longitude;
             this.latitude = latitude;
         }
@@ -202,6 +202,26 @@ public class actividad {
     }
 
     public void setExcludedDays(String excludedDays) {
+        this.excludedDays = excludedDays;
+    }
+
+    public actividad(String uid, String dtend, Location location, String eventLocation, String link, String relation, String id, Organization organization, String title, String dtstart, String references, Recurrence recurrence, String price, Address address, String description, String excludedDays) {
+
+        this.uid = uid;
+        this.dtend = dtend;
+        this.location = location;
+        this.eventLocation = eventLocation;
+        this.link = link;
+        this.relation = relation;
+        this.id = id;
+        this.organization = organization;
+        this.title = title;
+        this.dtstart = dtstart;
+        this.references = references;
+        this.recurrence = recurrence;
+        this.price = price;
+        this.address = address;
+        this.description = description;
         this.excludedDays = excludedDays;
     }
 }

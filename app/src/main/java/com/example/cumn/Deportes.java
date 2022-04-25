@@ -27,14 +27,12 @@ public class Deportes extends AppCompatActivity implements Callback<ArrayList<ac
 
         Toast.makeText(this, "Deportes" , Toast.LENGTH_LONG).show();
 
-<<<<<<< HEAD
         List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
-=======
 
         Call<ArrayList<actividad>> call = actividadesApiAdapter.getApiService().getactividades(); //esto nos devuelve una llamada asincrona
         call.enqueue(this);
-        List<datos> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
->>>>>>> cc4c21ffd63c38666acc8365237631a3187b2f6a
+
+        List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
         for (int i=0; i<1000; i++) {
             dato p = new dato(i, "Deportes"+i, "deporte cosas" , 53653, 732738732,"hddhdhd");
