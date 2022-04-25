@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.example.cumn.io.actividadesApiAdapter;
 import com.example.cumn.model.actividad;
+import com.example.cumn.models.Graph;
+import com.example.cumn.models.Models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +21,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Deportes extends AppCompatActivity implements Callback<ArrayList<actividad>> {
+public class Deportes extends AppCompatActivity implements Callback<Models> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,7 @@ public class Deportes extends AppCompatActivity implements Callback<ArrayList<ac
 
         List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
-        Call<ArrayList<actividad>> call = actividadesApiAdapter.getApiService().getactividades(); //esto nos devuelve una llamada asincrona
+        Call<Models> call = actividadesApiAdapter.getApiService().getactividades(); //esto nos devuelve una llamada asincrona
         call.enqueue(this);
 
         //List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
@@ -50,15 +53,15 @@ public class Deportes extends AppCompatActivity implements Callback<ArrayList<ac
     }
 
     @Override
-    public void onResponse(Call<ArrayList<actividad>> call, Response<ArrayList<actividad>> response) {
+    public void onResponse(Call<Models> call, Response<Models> response) {
         if (response.isSuccessful()){
-            ArrayList<actividad> actividades= response.body();
-            Log.d("onResponse actividades", "Tamaño de actividades =>" + actividades.size());
+            List<Graph> actividades = response.body().getGraph();
+            Log.d("onResponse actividades", "Tamaño de nuestro arreglo => " + actividades.size());
         }
     }
 
     @Override
-    public void onFailure(Call<ArrayList<actividad>> call, Throwable t) {
+    public void onFailure(Call<Models> call, Throwable t) {
 
     }
 }
