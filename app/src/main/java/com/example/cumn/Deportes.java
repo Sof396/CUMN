@@ -32,7 +32,7 @@ public class Deportes extends AppCompatActivity implements Callback<ArrayList<ac
         Call<ArrayList<actividad>> call = actividadesApiAdapter.getApiService().getactividades(); //esto nos devuelve una llamada asincrona
         call.enqueue(this);
 
-        List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
+        //List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
         for (int i=0; i<1000; i++) {
             dato p = new dato(i, "Deportes"+i, "deporte cosas" , 53653, 732738732,"hddhdhd");
@@ -40,10 +40,10 @@ public class Deportes extends AppCompatActivity implements Callback<ArrayList<ac
         }
 
 
-        MiAdapter ma = new MiAdapter(datosDeportes);
+        //MiAdapter ma = new MiAdapter(datosDeportes);
 
         RecyclerView rv = findViewById(R.id.lista_actividades_Deportes);
-        rv.setAdapter(ma);
+        //rv.setAdapter(ma);
 
         // controlar el layoutmanager
         rv.setLayoutManager(new LinearLayoutManager(this));

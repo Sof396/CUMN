@@ -27,10 +27,10 @@ public class Bibliotecas extends AppCompatActivity {
         }
 
 
-        MiAdapter ma = new MiAdapter(datosBibliotecas);
+        //MiAdapter ma = new MiAdapter(datosBibliotecas);
 
         RecyclerView rv = findViewById(R.id.lista_actividades_Bibliotecas);
-        rv.setAdapter(ma);
+        //rv.setAdapter(ma);
 
         // controlar el layoutmanager
         rv.setLayoutManager(new LinearLayoutManager(this));

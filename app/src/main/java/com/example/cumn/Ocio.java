@@ -74,10 +74,10 @@ public class Ocio extends AppCompatActivity {
         }
 
 
-        MiAdapter ma = new MiAdapter(call);
+        //MiAdapter ma = new MiAdapter(call);
 
         RecyclerView rv = findViewById(R.id.lista_actividades_Ocio);
-        rv.setAdapter(ma);
+        //rv.setAdapter(ma);
 
         // controlar el layoutmanager
         rv.setLayoutManager(new LinearLayoutManager(this));
