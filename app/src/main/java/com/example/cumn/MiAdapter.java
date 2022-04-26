@@ -1,8 +1,10 @@
 package com.example.cumn;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +14,23 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cumn.models.Graph;
+import com.example.cumn.models.Models;
+import com.google.gson.Gson;
+
 import java.lang.ref.WeakReference;
 import java.util.List;
 
 public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
 
-    private List<dato> datos;
-    private final ClickListener listener;
+    private List<Graph> graphs;
+
+    private Context context;
 
 
-    public MiAdapter(List<dato> datos, ClickListener listener) {
-        this.datos = datos;
-        this.listener = listener;
+    public MiAdapter(List<Graph> graphs) {
+        this.graphs = graphs;
+
     }
 
     @NonNull
@@ -32,70 +39,46 @@ public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
         //// para devolver el xml de la fila
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fila, parent, false);
-        MiViewHolder vh = new MiViewHolder(v,listener);
+        MiViewHolder vh = new MiViewHolder(v);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MiAdapter.MiViewHolder holder, int position) {
         //// rellenar los datos del layout
-        holder.titulo.setText(datos.get(position).getTitle());
-        holder.fecha.setText(datos.get(position).getDtstart());
+        holder.titulo.setText(graphs.get(position).getTitle());
+        holder.fecha.setText(graphs.get(position).getDtstart());
+
     }
 
     @Override
     public int getItemCount() {
-        return datos.size();
+        return graphs.size();
     }
 
-    public class MiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+    public class MiViewHolder extends RecyclerView.ViewHolder  {
         TextView titulo;
         TextView fecha;
+        Graph graph;
+        int position;
         WeakReference<ClickListener> listenerRef;
 
-        public MiViewHolder(@NonNull View itemView, ClickListener listener) {
+        public MiViewHolder(@NonNull View itemView) {
             super(itemView);
+            context = itemView.getContext();
             /// ajustar findview By ID
-
-            listenerRef = new WeakReference<>(listener);
-
             titulo = itemView.findViewById(R.id.titulo);
             fecha = itemView.findViewById(R.id.fecha);
 
-            itemView.setOnClickListener(this);
+            itemView.setOnClickListener((view -> {
+                Intent masInfo = new Intent(context, com.example.cumn.masInfo.class);
+                Gson gson = new Gson();
+                masInfo.putExtra("datos", gson.toJson((graph)));
+            }));
+
 
         }
 
-        @Override
-        public void onClick(View view) {
-
-            if (view.getId() == titulo.getId()) {
-                Toast.makeText(view.getContext(), "ITEM PRESSED = " + String.valueOf(getAbsoluteAdapterPosition()), Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(view.getContext(), "ROW PRESSED = " + String.valueOf(getAbsoluteAdapterPosition()), Toast.LENGTH_SHORT).show();
-            }
-
-            listenerRef.get().onPositionClicked(getAbsoluteAdapterPosition());
-
-        }
-
-        @Override
-        public boolean onLongClick(View view) {
-            final AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-            builder.setTitle("Hello Dialog")
-                    .setMessage("LONG CLICK DIALOG WINDOW FOR ICON " + String.valueOf(getAbsoluteAdapterPosition()))
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-
-                        }
-                    });
-
-            builder.create().show();
-            listenerRef.get().onLongClicked(getAbsoluteAdapterPosition());
-            return true;
-        }
     }
-
 }
 

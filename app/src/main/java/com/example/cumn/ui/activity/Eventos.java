@@ -32,23 +32,11 @@ public class Eventos extends AppCompatActivity {
         }
 
 
-        MiAdapter ma = new MiAdapter(datosEventos, new ClickListener(){
 
-            @Override
-            public void onPositionClicked(int position) {
-                
-            }
-
-            @Override
-            public void onLongClicked(int position) {
-
-            }
-        });
-
-        RecyclerView rv = findViewById(R.id.lista_actividades_Eventos);
-        rv.setAdapter(ma);
+        //RecyclerView rv = findViewById(R.id.lista_actividades_Eventos);
+        //rv.setAdapter(ma);
 
         // controlar el layoutmanager
-        rv.setLayoutManager(new LinearLayoutManager(this));
+        //rv.setLayoutManager(new LinearLayoutManager(this));
     }
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.cumn.MiAdapter;
 import com.example.cumn.R;
 import com.example.cumn.dato;
 import com.example.cumn.io.actividadesApiAdapter;
@@ -69,9 +70,13 @@ public class Deportes extends AppCompatActivity implements Callback<Models> {
     public void onResponse(Call<Models> call, Response<Models> response) {
         if (response.isSuccessful()){
             List<Graph> actividades = response.body().getGraph();
+
+            //MiAdapter ma =new MiAdapter(actividades);
+            //RecyclerView rv = findViewById(R.id.lista_actividades_deportes);
+            //rv.setLayoutManager(new LinearLayoutManager(this));
             Log.d("onResponse actividades", "Tamaño de nuestro arreglo => " + actividades.size());
             mAdapter.setDataSet(actividades);
-            //System.out.println("primer elemento: " + actividades.get(0).getTitle());
+            // System.out.println("primer elemento: " + actividades.get(0).getTitle());
         }
     }
 

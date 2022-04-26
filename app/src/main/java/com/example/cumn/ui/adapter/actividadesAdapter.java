@@ -1,6 +1,8 @@
 package com.example.cumn.ui.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cumn.R;
 import com.example.cumn.models.Graph;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +24,10 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         //Creamos la nueva vista
-        TextView tv = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.actividad_view, parent, false);
+        View tv = (View) LayoutInflater.from(parent.getContext()).inflate(R.layout.fila, parent, false);
 
         //Podemos definir tamaños, márgnes, paddings, etc...
+
 
         ViewHolder vh = new ViewHolder(tv);
         return vh;
@@ -32,7 +36,8 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int i) {
 
-        holder.textView.setText(mDataSet.get(i).getTitle());
+        holder.titulo.setText(mDataSet.get(i).getTitle());
+        holder.fecha.setText(mDataSet.get(i).getDtstart());
 
     }
 
@@ -42,10 +47,14 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView textView;
-        public ViewHolder(TextView tv){
+        //public TextView textView;
+        TextView fecha;
+        TextView titulo;
+        public ViewHolder(View tv){
             super(tv);
-            textView = tv;
+            //textView = tv;
+            titulo = itemView.findViewById(R.id.titulo);
+            fecha = itemView.findViewById(R.id.fecha);
         }
     }
 
