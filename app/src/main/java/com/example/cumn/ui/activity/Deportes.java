@@ -1,4 +1,4 @@
-package com.example.cumn;
+package com.example.cumn.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.cumn.R;
+import com.example.cumn.dato;
 import com.example.cumn.io.actividadesApiAdapter;
 import com.example.cumn.models.Graph;
 import com.example.cumn.models.Models;
@@ -69,6 +71,7 @@ public class Deportes extends AppCompatActivity implements Callback<Models> {
             List<Graph> actividades = response.body().getGraph();
             Log.d("onResponse actividades", "Tamaño de nuestro arreglo => " + actividades.size());
             mAdapter.setDataSet(actividades);
+            //System.out.println("primer elemento: " + actividades.get(0).getTitle());
         }
     }
 

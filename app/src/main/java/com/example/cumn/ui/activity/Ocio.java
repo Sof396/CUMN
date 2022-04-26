@@ -1,4 +1,4 @@
-package com.example.cumn;
+package com.example.cumn.ui.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,9 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cumn.MadridService;
+import com.example.cumn.R;
+import com.example.cumn.dato;
 import com.example.cumn.datos.ocio.example.datosOcio;
 
 import java.util.ArrayList;

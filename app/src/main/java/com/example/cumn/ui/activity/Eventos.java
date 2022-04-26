@@ -1,4 +1,4 @@
-package com.example.cumn;
+package com.example.cumn.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,6 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.cumn.ClickListener;
+import com.example.cumn.MiAdapter;
+import com.example.cumn.R;
+import com.example.cumn.dato;
 
 import java.util.ArrayList;
 import java.util.List;

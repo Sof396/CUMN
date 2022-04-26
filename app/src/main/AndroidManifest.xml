@@ -29,31 +29,31 @@
             android:name=".masInfo"
             android:exported="false" />
         <activity
-            android:name=".Ocio"
+            android:name=".ui.activity.Ocio"
             android:exported="false"
-            android:parentActivityName=".MenuPrincipal"/>
+            android:parentActivityName=".ui.activity.MenuPrincipal"/>
 
         <activity
-            android:name=".Eventos"
+            android:name=".ui.activity.Eventos"
             android:exported="false"
-            android:parentActivityName=".MenuPrincipal"/>
+            android:parentActivityName=".ui.activity.MenuPrincipal"/>
 
         <activity
-            android:name=".Bibliotecas"
+            android:name=".ui.activity.Bibliotecas"
             android:exported="false"
-            android:parentActivityName=".MenuPrincipal"/>
+            android:parentActivityName=".ui.activity.MenuPrincipal"/>
 
         <activity
-            android:name=".Deportes"
+            android:name=".ui.activity.Deportes"
             android:exported="false"
-            android:parentActivityName=".MenuPrincipal"/>
+            android:parentActivityName=".ui.activity.MenuPrincipal"/>
 
         <activity
-            android:name=".MenuPrincipal"
+            android:name=".ui.activity.MenuPrincipal"
             android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
