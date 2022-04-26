@@ -51,11 +51,6 @@ public class Deportes extends AppCompatActivity implements Callback<Models> {
         call.enqueue(this);
 
 
-        for (int i=0; i<1000; i++) {
-            dato p = new dato(i, "Deportes"+i, "deporte cosas" , 53653, 732738732,"hddhdhd");
-            datosDeportes.add(p);
-        }
-
 
         //MiAdapter ma = new MiAdapter(datosDeportes);
 

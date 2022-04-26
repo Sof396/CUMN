@@ -7,13 +7,15 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="412dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="386dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="16dp"
+        android:padding="4sp"
         android:text="Titulo"
+        android:textAlignment="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,11 +23,13 @@
         android:id="@+id/fecha"
         android:layout_width="243dp"
         android:layout_height="48dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="128dp"
+        android:padding="4sp"
+        android:paddingLeft="4sp"
         android:text="fecha"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,11 +37,10 @@
         android:id="@+id/masInfo"
         android:layout_width="116dp"
         android:layout_height="48dp"
-        android:onClick="sendHola"
         android:text="Mas info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintHorizontal_bias="0.979"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
