@@ -4,7 +4,10 @@
 
 -Uso de RecyclerView con View-Holder ✔ 
 
--Por lo menos acceso a dos endpoints (uno para mostrar datos, y otro para los detalles) ✔ (Realmente estamos accediendo distintos endpoints de la API, deportes, ocio...)
+-Por lo menos acceso a dos endpoints (uno para mostrar datos, y otro para los detalles) ✔ 
+
+(Realmente estamos accediendo distintos endpoints de la API, deportes, ocio...)
+
 
 Opcionales...
 
