@@ -46,7 +46,7 @@ public class Deportes extends AppCompatActivity implements Callback<Models> {
 
         List<dato> datosDeportes = new ArrayList<>();  //lista de los datos que se obtengan de la API
 
-        Call<Models> call = actividadesApiAdapter.getApiService().getactividades(); //esto nos devuelve una llamada asincrona
+        Call<Models> call = actividadesApiAdapter.getApiService().getDeportes(); //esto nos devuelve una llamada asincrona
         call.enqueue(this);
 
 
