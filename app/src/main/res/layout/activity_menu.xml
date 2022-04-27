@@ -1,88 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_weight="1">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/elige_el_rea_de_tus_actividades"
-        android:textSize="30sp"
-        android:textAlignment="center"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
-
-    <TableLayout
-        android:id="@+id/tableLayout2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/color_primario_oscuro"
+        android:text="Elige el área de tus actividades"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="84dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
 
-            <Button
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
                 android:id="@+id/Ocio"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/ocio" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100px"
-                android:layout_marginRight="100px"
-                android:background="@drawable/shape"
-                android:backgroundTint="@android:color/holo_blue_light"
+                android:baselineAligned="false"
                 android:text="@string/Ocio"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                android:textColor="@color/color_primario_oscuro" />
 
-            <Button
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
                 android:id="@+id/Deportes"
-                style="@style/Widget.AppCompat.Button"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/deportes"/>
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="100px"
-                android:layout_marginRight="100px"
-                android:background="@drawable/shape"
-                android:backgroundTint="@android:color/holo_blue_light"
-                android:text="@string/Deportes" />
-        </TableRow>
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_primario_oscuro"
+                android:text="@string/Deportes"/>
+        </LinearLayout>
 
-        <TableRow
-            android:layout_width="347dp"
-            android:layout_height="134dp">
+    </LinearLayout>
 
-            <Button
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
                 android:id="@+id/Bibliotecas"
-                style="@style/Widget.AppCompat.Button"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/biblioteca"/>
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100px"
-                android:layout_marginTop="100px"
-                android:layout_marginRight="100px"
-                android:background="@drawable/shape"
-                android:backgroundTint="@android:color/holo_blue_light"
-                android:text="@string/Bibliotecas" />
+                android:textColor="@color/color_primario_oscuro"
+                android:text="@string/Bibliotecas"/>
 
-            <Button
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
                 android:id="@+id/Eventos"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:baselineAligned="false"
+                android:src="@drawable/eventos" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100px"
-                android:layout_marginTop="100px"
-                android:layout_marginRight="100px"
-                android:background="@drawable/shape"
-                android:backgroundTint="@android:color/holo_blue_light"
-                android:text="@string/Eventos" />
-        </TableRow>
+                android:text="@string/Eventos"
+                android:textColor="@color/color_primario_oscuro" />
+        </LinearLayout>
 
-    </TableLayout>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

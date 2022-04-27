@@ -18,9 +18,9 @@ public interface actividadesApiService {
     Call<Models> getBibliotecas();
 
     @GET("206974-0-agenda-eventos-culturales-100.json")
-    Call<Models> getEventos();
+    Call<Models> getOcio();
 
     @GET("300107-0-agenda-actividades-eventos.json")
-    Call<Models> getOcio();
+    Call<Models> getEventos();
 
 }
