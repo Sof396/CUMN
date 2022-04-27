@@ -26,7 +26,7 @@ public class masInfo extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.masInfoTitulo);
 
-        textView.setText(obj.toString());
+        textView.setText(intent.getStringExtra());
 
     }
 }

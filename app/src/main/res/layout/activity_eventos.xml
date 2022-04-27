@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="419dp"
-        android:layout_height="71dp"
+        android:layout_width="418dp"
+        android:layout_height="54dp"
         android:gravity="center"
         android:text="EVENTOS"
         android:textAlignment="center"

@@ -2,6 +2,7 @@ package com.example.cumn.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cumn.R;
 import com.example.cumn.masInfo;
 import com.example.cumn.models.Graph;
+import com.example.cumn.models.Models;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -55,7 +57,7 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
         //public TextView textView;
         TextView fecha;
         TextView titulo;
-        private Graph graph;
+        private Models mDataSet;
 
 
         public ViewHolder(View tv){
@@ -66,8 +68,7 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
 
             itemView.setOnClickListener((view -> {
                 Intent masInfo = new Intent(tv.getContext(), com.example.cumn.masInfo.class);
-                Gson gson =new Gson();
-                masInfo.putExtra("datos", gson.toJson(graph));
+                masInfo.putExtra("titulo",  );
                 tv.getContext().startActivity(masInfo);
 
 
