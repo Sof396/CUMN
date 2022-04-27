@@ -68,7 +68,7 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
                 Intent masInfo = new Intent(tv.getContext(), com.example.cumn.masInfo.class);
                 Gson gson =new Gson();
 
-                //startActivity(masInfo);
+                tv.getContext().startActivity(masInfo);
                 masInfo.putExtra("datos", gson.toJson(graph));
 
             }));
