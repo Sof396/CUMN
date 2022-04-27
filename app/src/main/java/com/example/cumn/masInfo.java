@@ -18,15 +18,16 @@ public class masInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mas_info);
 
+        TextView textView = findViewById(R.id.masInfoTitulo);
         Gson gson = new Gson();
-        String strObj = getIntent().getStringExtra("obj");
+        String strObj = getIntent().getStringExtra("Titulo");
         Models obj = gson.fromJson(strObj, Models.class);
 
         Intent intent = getIntent();
 
-        TextView textView = findViewById(R.id.masInfoTitulo);
 
-        textView.setText(intent.getStringExtra());
+
+        //textView.setText(strObj.get);
 
     }
 }

@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.MainActivity"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="406dp"
-        android:layout_height="66dp"
+        android:layout_width="404dp"
+        android:layout_height="55dp"
         android:gravity="center"
         android:text="OCIO"
         android:textAlignment="center"
@@ -24,8 +25,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_actividades_Ocio"
-        android:layout_width="413dp"
-        android:layout_height="665dp"
+        android:layout_width="411dp"
+        android:layout_height="678dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

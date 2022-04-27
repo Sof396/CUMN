@@ -45,6 +45,7 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
         holder.titulo.setText(mDataSet.get(i).getTitle());
         holder.fecha.setText(mDataSet.get(i).getDtstart());
 
+
     }
 
     @Override
@@ -67,8 +68,9 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
             fecha = itemView.findViewById(R.id.fecha);
 
             itemView.setOnClickListener((view -> {
+
                 Intent masInfo = new Intent(tv.getContext(), com.example.cumn.masInfo.class);
-                masInfo.putExtra("titulo",  );
+                masInfo.putExtra("titulo",mDataSet.getContext().getId() );
                 tv.getContext().startActivity(masInfo);
 
 
