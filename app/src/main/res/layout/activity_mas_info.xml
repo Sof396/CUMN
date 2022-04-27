@@ -6,4 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".masInfo">
 
+    <TextView
+        android:id="@+id/masInfoTitulo"
+        android:layout_width="329dp"
+        android:layout_height="54dp"
+        android:text="Titulo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/masInfoDescripcioin"
+        android:layout_width="327dp"
+        android:layout_height="151dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoTitulo"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapita"
+        android:layout_width="331dp"
+        android:layout_height="266dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcioin"
+        app:layout_constraintVertical_bias="0.735" />
+
+    <TextView
+        android:id="@+id/masInfoFecha"
+        android:layout_width="153dp"
+        android:layout_height="47dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="342dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
