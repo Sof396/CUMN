@@ -2,20 +2,17 @@ package com.example.cumn.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cumn.R;
-import com.example.cumn.masInfo;
 import com.example.cumn.models.Graph;
 import com.example.cumn.models.Models;
-import com.google.gson.Gson;
+import com.example.cumn.ui.activity.masInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +39,18 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int i) {
 
+        final Graph graph = mDataSet.get(i);
         holder.titulo.setText(mDataSet.get(i).getTitle());
         holder.fecha.setText(mDataSet.get(i).getDtstart());
+
+        holder.itemView.setOnClickListener((view -> {
+
+            Intent masInfo = new Intent(context, masInfo.class);
+            masInfo.putExtra("actividad_id", graph.getId() );
+            context.startActivity(masInfo);
+
+
+        }));
 
 
     }
@@ -69,8 +76,8 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
 
             itemView.setOnClickListener((view -> {
 
-                Intent masInfo = new Intent(tv.getContext(), com.example.cumn.masInfo.class);
-                masInfo.putExtra("titulo",mDataSet.getContext().getId() );
+                Intent masInfo = new Intent(tv.getContext(), com.example.cumn.ui.activity.masInfo.class);
+                masInfo.putExtra("actividad_id", getItemId() );
                 tv.getContext().startActivity(masInfo);
 
 

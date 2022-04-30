@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".masInfo">
+    tools:context=".ui.activity.masInfo">
 
     <TextView
         android:id="@+id/masInfoTitulo"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.036" />
 
     <TextView
-        android:id="@+id/masInfoDescripcioin"
+        android:id="@+id/masInfoDescripcion"
         android:layout_width="327dp"
         android:layout_height="151dp"
         android:text="TextView"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcioin"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
         app:layout_constraintVertical_bias="0.735" />
 
     <TextView

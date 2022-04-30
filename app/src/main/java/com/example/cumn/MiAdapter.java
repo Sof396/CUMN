@@ -1,21 +1,19 @@
+
+//CREO QUE ESTA CLASE HAY QUE BORRARLA
+
 package com.example.cumn;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.ColorSpace;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cumn.models.Graph;
-import com.example.cumn.models.Models;
 import com.google.gson.Gson;
 
 import java.lang.ref.WeakReference;
@@ -71,7 +69,7 @@ public class MiAdapter extends RecyclerView.Adapter<MiAdapter.MiViewHolder> {
             fecha = itemView.findViewById(R.id.fecha);
 
             itemView.setOnClickListener((view -> {
-                Intent masInfo = new Intent(context, com.example.cumn.masInfo.class);
+                Intent masInfo = new Intent(context, com.example.cumn.ui.activity.masInfo.class);
                 Gson gson = new Gson();
                 masInfo.putExtra("datos", gson.toJson((graph)));
             }));

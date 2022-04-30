@@ -15,7 +15,8 @@
         android:text="DEPORTES"
         android:textAlignment="center"
         android:textSize="48sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_actividades_deportes"
