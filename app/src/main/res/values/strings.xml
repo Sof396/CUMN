@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">CUMN</string>
     <string name="bienvenido">Bienvenid@!</string>
-    <string name="button">Button</string>
-    <string name="elige_el_rea_de_tus_actividades">Elige el área de tus actividades</string>
+    <string name="titulo_categorías">Elige el área de tus actividades</string>
     <string name="Ocio">Ocio</string>
     <string name="Deportes">Deportes</string>
     <string name="Bibliotecas">Bibliotecas</string>

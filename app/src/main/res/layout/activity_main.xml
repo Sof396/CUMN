@@ -4,16 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.MainActivity"
+    android:background="@color/color_secundario_claro">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bienvenido"
+        android:textColor="@color/color_primario_oscuro"
         android:textStyle="bold"
         android:textAlignment="center"
         android:gravity="center"
-        android:textSize="50sp"
+        android:textSize="30dp"
+        android:fontFamily="@font/press_regular"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
