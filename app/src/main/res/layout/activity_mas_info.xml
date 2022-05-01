@@ -40,10 +40,11 @@
         app:layout_constraintVertical_bias="0.735" />
 
     <TextView
-        android:id="@+id/masInfoFecha"
+        android:id="@+id/masInfoOrganizacion"
         android:layout_width="153dp"
         android:layout_height="47dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="342dp" />
+        tools:layout_editor_absoluteY="342dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

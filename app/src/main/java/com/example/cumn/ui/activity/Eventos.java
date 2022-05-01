@@ -8,16 +8,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.cumn.ClickListener;
-import com.example.cumn.MiAdapter;
 import com.example.cumn.R;
-import com.example.cumn.dato;
 import com.example.cumn.io.actividadesApiAdapter;
 import com.example.cumn.models.Graph;
 import com.example.cumn.models.Models;
 import com.example.cumn.ui.adapter.actividadesAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;

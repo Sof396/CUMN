@@ -22,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class masInfo extends AppCompatActivity implements Callback<Models> {
+public class masInfo extends AppCompatActivity {
 
     private actividadesAdapter mAdapter;
 
@@ -32,29 +32,26 @@ public class masInfo extends AppCompatActivity implements Callback<Models> {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mas_info);
 
-        TextView textView = findViewById(R.id.masInfoTitulo);
+        TextView tituloView = findViewById(R.id.masInfoTitulo);
+        TextView descripcionView = findViewById(R.id.masInfoDescripcion);
+        TextView organizacionView = findViewById(R.id.masInfoOrganizacion);
 
-        Intent intent = getIntent();
-        String actividad_id = intent.getStringExtra("actividad_id");
+        Bundle datos = this.getIntent().getExtras();
+        if (datos != null){
 
 
-        Call<Models> call = actividadesApiAdapter.getApiService().getDeportes(); //esto nos devuelve una llamada asincrona
-        call.enqueue(this);
 
-        //textView.setText(strObj.get);
+            String titulo = datos.getString("titulo");
+            String descripcion = datos.getString("descripcion");
+            String link = datos.getString("link");
+            Double latitud = datos.getDouble("latitud");
+            Double longitud = datos.getDouble("longitud");
+            String organizacion = datos.getString("organizacion");
 
-    }
-
-    @Override
-    public void onResponse(Call<Models> call, Response<Models> response) {
-        List<Graph> actividades = response.body().getGraph();
-
-        Log.d("onResponse actividades", "Tamaño de nuestro arreglo => " + actividades.size());
-        mAdapter.setDataSet(actividades);
-    }
-
-    @Override
-    public void onFailure(Call<Models> call, Throwable t) {
+            tituloView.setText(titulo);
+            descripcionView.setText(descripcion);
+            organizacionView.setText(organizacion);
+        }
 
     }
 }
