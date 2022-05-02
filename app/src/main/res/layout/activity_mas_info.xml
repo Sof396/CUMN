@@ -41,10 +41,13 @@
 
     <TextView
         android:id="@+id/masInfoOrganizacion"
-        android:layout_width="153dp"
+        android:layout_width="331dp"
         android:layout_height="47dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="342dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/mapita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

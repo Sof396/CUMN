@@ -67,7 +67,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_primario_oscuro"
-                android:text="@string/Deportes"/>
+                android:text="@string/Deportes"
+                android:padding="10dp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -94,7 +95,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_primario_oscuro"
-                android:text="@string/Bibliotecas"/>
+                android:text="@string/Bibliotecas"
+                android:padding="10dp"/>
 
         </LinearLayout>
 
@@ -117,7 +119,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Eventos"
-                android:textColor="@color/color_primario_oscuro" />
+                android:textColor="@color/color_primario_oscuro"
+                android:padding="10dp"/>
         </LinearLayout>
 
     </LinearLayout>

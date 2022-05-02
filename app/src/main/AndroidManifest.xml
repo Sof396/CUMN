@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cumn">
-
+    
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -18,6 +18,10 @@
              To get one, follow the directions here:
 
                 https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+                NUESTRA CLAVE ES: AIzaSyAx28OEv8IwAP8anR2-fca9u_SOtAKQTig
+                NUESTRO CERTIFICADO DE DEPURACION ES: keytool -list -v -keystore "%USERPROFILE%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
 
              Once you have your API key (it starts with "AIza"), define a new property in your
              project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the

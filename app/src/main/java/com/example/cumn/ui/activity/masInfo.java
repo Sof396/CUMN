@@ -14,6 +14,8 @@ import com.example.cumn.io.actividadesApiAdapter;
 import com.example.cumn.models.Graph;
 import com.example.cumn.models.Models;
 import com.example.cumn.ui.adapter.actividadesAdapter;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -35,6 +37,8 @@ public class masInfo extends AppCompatActivity {
         TextView tituloView = findViewById(R.id.masInfoTitulo);
         TextView descripcionView = findViewById(R.id.masInfoDescripcion);
         TextView organizacionView = findViewById(R.id.masInfoOrganizacion);
+        MapView mapaView = findViewById(R.id.mapita);
+        mapaView.getMapAsync(call);
 
         Bundle datos = this.getIntent().getExtras();
         if (datos != null){
