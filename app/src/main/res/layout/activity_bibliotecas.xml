@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity"
-    android:background="@drawable/background">
+    android:background="#03DAC6">
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="418dp"
-        android:layout_height="78dp"
+        android:layout_height="80dp"
         android:gravity="center"
-        android:text="BIBLIOTECAS"
+        android:text="@string/tituloBibliotecas"
+        android:background="@drawable/background"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -27,6 +28,7 @@
         android:id="@+id/lista_actividades_Bibliotecas"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/mitad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

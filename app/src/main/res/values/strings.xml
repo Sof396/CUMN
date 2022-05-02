@@ -6,5 +6,9 @@
     <string name="Deportes">Deportes</string>
     <string name="Bibliotecas">Bibliotecas</string>
     <string name="Eventos">Eventos</string>
+    <string name="tituloOcio">OCIO</string>
+    <string name="tituloDeportes">DEPORTES</string>
+    <string name="tituloBibliotecas">BIBLIOTECAS</string>
+    <string name="tituloEventos">EVENTOS</string>
 
 </resources>
