@@ -61,6 +61,44 @@ public class Graph {
     @SerializedName("address")
     @Expose
     private Address address;
+
+
+    public References getReferences() {
+        return references;
+    }
+
+    public void setReferences(References references) {
+        this.references = references;
+    }
+
+    public Relation getRelation() {
+        return relation;
+    }
+
+    public void setRelation(Relation relation) {
+        this.relation = relation;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public Organization getOrganization() {
+        return organization;
+    }
+
     @SerializedName("location")
     @Expose
     private Location location;

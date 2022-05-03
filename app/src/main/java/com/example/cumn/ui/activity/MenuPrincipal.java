@@ -1,18 +1,19 @@
 package com.example.cumn.ui.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.cumn.R;
 
 public class MenuPrincipal extends AppCompatActivity {
-
-    private Button botonOcio;
-    private Button botonDeportes;
-    private Button botonBiblio;
-    private Button botonEventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,10 @@ public class MenuPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-        botonOcio = findViewById(R.id.Ocio);
-        botonDeportes = findViewById(R.id.Deportes);
-        botonBiblio = findViewById(R.id.Bibliotecas);
-        botonEventos = findViewById(R.id.Eventos);
+        ImageView botonOcio = findViewById(R.id.Ocio);
+        ImageView botonDeportes = findViewById(R.id.Deportes);
+        ImageView botonBiblio = findViewById(R.id.Bibliotecas);
+        ImageView botonEventos = findViewById(R.id.Eventos);
 
         botonOcio.setOnClickListener(view -> {
             Intent intentOcio = new Intent(MenuPrincipal.this, Ocio.class);
@@ -44,5 +45,29 @@ public class MenuPrincipal extends AppCompatActivity {
             Intent intentEventos = new Intent(MenuPrincipal.this, Eventos.class);
             startActivity(intentEventos);
         });
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == event.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Te vas?").setPositiveButton("Obvio!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.addCategory(Intent.CATEGORY_HOME);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            }).setNegativeButton("Todavía no!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.show();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

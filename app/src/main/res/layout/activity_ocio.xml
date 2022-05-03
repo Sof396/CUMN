@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity"
-    android:background="@drawable/background">
+    android:background="#03DAC6">
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="404dp"
-        android:layout_height="55dp"
+        android:layout_height="80dp"
         android:gravity="center"
-        android:text="OCIO"
+        android:background="@drawable/background"
+        android:text="@string/tituloOcio"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -25,14 +26,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_actividades_Ocio"
-        android:layout_width="411dp"
-        android:layout_height="678dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/mitad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/titulo"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

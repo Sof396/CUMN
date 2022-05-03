@@ -8,14 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cumn.R;
-import com.example.cumn.masInfo;
 import com.example.cumn.models.Graph;
 import com.example.cumn.models.Models;
-import com.google.gson.Gson;
+import com.example.cumn.ui.activity.masInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +23,6 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
     private List<Graph> mDataSet;
     private Context context;
 
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -34,7 +31,6 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
 
         //Podemos definir tamaños, márgnes, paddings, etc...
 
-
         ViewHolder vh = new ViewHolder(tv);
         return vh;
     }
@@ -42,8 +38,26 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int i) {
 
-        holder.titulo.setText(mDataSet.get(i).getTitle());
-        holder.fecha.setText(mDataSet.get(i).getDtstart());
+        final Graph graph = mDataSet.get(i);
+        holder.titulo.setText(graph.getTitle());
+        holder.fecha.setText(graph.getDtstart());
+
+        context = holder.itemView.getContext();
+
+        holder.itemView.setOnClickListener(view -> {
+
+            Intent masInfo = new Intent(context.getApplicationContext(), masInfo.class);
+            masInfo.putExtra("titulo", graph.getTitle());
+            masInfo.putExtra("descripcion", graph.getDescription());
+            masInfo.putExtra("link", graph.getLink());
+            masInfo.putExtra("latitud", graph.getLocation().getLatitude());
+            masInfo.putExtra("longitud", graph.getLocation().getLongitude());
+            masInfo.putExtra("organizacion", graph.getOrganization().getOrganizationName());
+
+            context.startActivity(masInfo);
+
+
+        });
 
 
     }
@@ -55,26 +69,14 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private Context context;
-        //public TextView textView;
         TextView fecha;
         TextView titulo;
-        private Models mDataSet;
 
 
         public ViewHolder(View tv){
             super(tv);
-            //textView = tv;
             titulo = itemView.findViewById(R.id.titulo);
             fecha = itemView.findViewById(R.id.fecha);
-
-            itemView.setOnClickListener((view -> {
-
-                Intent masInfo = new Intent(tv.getContext(), com.example.cumn.masInfo.class);
-                masInfo.putExtra("titulo",mDataSet.getContext().getId() );
-                tv.getContext().startActivity(masInfo);
-
-
-            }));
 
         }
     }

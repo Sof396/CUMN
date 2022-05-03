@@ -38,15 +38,17 @@ public class Ocio extends AppCompatActivity implements Callback<Models>{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Asociamos al layout correspondiente
         setContentView(R.layout.activity_ocio);
 
         Toast.makeText(this, "Ocio" , Toast.LENGTH_LONG).show();
 
 
-
+        //Creamos un objeto recyclerView y lo asociamos al que está en el layout
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.lista_actividades_Ocio);
 
-
+        mRecyclerView.setHasFixedSize(true);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -54,20 +56,8 @@ public class Ocio extends AppCompatActivity implements Callback<Models>{
         mRecyclerView.setAdapter(mAdapter);
 
 
-        List<dato> datosBibliotecas = new ArrayList<>();  //lista de los datos que se obtengan de la API
-
         Call<Models> call = actividadesApiAdapter.getApiService().getOcio(); //esto nos devuelve una llamada asincrona
         call.enqueue(this);
-
-
-
-        //MiAdapter ma = new MiAdapter(datosDeportes);
-
-        RecyclerView rv = findViewById(R.id.lista_actividades_Ocio);
-        //rv.setAdapter(ma);
-
-        // controlar el layoutmanager
-        rv.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
@@ -75,12 +65,8 @@ public class Ocio extends AppCompatActivity implements Callback<Models>{
         if (response.isSuccessful()){
             List<Graph> actividades = response.body().getGraph();
 
-            //MiAdapter ma =new MiAdapter(actividades);
-            //RecyclerView rv = findViewById(R.id.lista_actividades_deportes);
-            //rv.setLayoutManager(new LinearLayoutManager(this));
             Log.d("onResponse actividades", "Tamaño de nuestro arreglo => " + actividades.size());
             mAdapter.setDataSet(actividades);
-            // System.out.println("primer elemento: " + actividades.get(0).getTitle());
         }
     }
 
