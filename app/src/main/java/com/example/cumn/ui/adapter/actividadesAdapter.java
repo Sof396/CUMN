@@ -79,7 +79,15 @@ public class actividadesAdapter extends RecyclerView.Adapter<actividadesAdapter.
         }
     }
 
-    public actividadesAdapter( ){
+
+
+
+
+
+
+
+
+     public actividadesAdapter( ){
         mDataSet = new ArrayList<>();
     }
 
