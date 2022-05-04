@@ -4,34 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.masInfo">
+    tools:context=".ui.activity.masInfo"
+    android:background="@color/color_primario_claro">
+
 
     <TextView
         android:id="@+id/masInfoTitulo"
         android:layout_width="329dp"
         android:layout_height="54dp"
         android:text="Titulo"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.19" />
 
     <TextView
         android:id="@+id/masInfoDescripcion"
         android:layout_width="327dp"
         android:layout_height="151dp"
-        android:text="TextView"
+        android:text="Descripcion"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/masInfoTitulo"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.151" />
+
+    <TextView
+        android:id="@+id/masInfoOrganizacion"
+        android:layout_width="331dp"
+        android:layout_height="47dp"
+        android:text="Organizacion"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/mapita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
+        app:layout_constraintVertical_bias="0.714"></TextView>
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapita"
         android:layout_width="331dp"
-        android:layout_height="266dp"
+        android:layout_height="150dp"
         android:apiKey="AIzaSyAx28OEv8IwAP8anR2-fca9u_SOtAKQTig"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,14 +64,82 @@
         app:layout_constraintVertical_bias="0.735" />
 
     <TextView
-        android:id="@+id/masInfoOrganizacion"
-        android:layout_width="331dp"
-        android:layout_height="47dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/mapita"
+        android:id="@+id/textView5"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Actividad"
+        android:textColor="@color/color_titulos"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/masInfoTitulo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/color_secundario_oscuro"
+        app:layout_constraintBottom_toTopOf="@+id/masInfoTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textColor="@color/color_titulos"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/masInfoDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoTitulo"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="@color/color_secundario_oscuro"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:text="Organización"
+        android:textColor="@color/color_titulos"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/masInfoOrganizacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="@color/color_secundario_oscuro"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

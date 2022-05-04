@@ -58,9 +58,9 @@ public class masInfo extends AppCompatActivity implements OnMapReadyCallback{
             Double longitud = datos.getDouble("longitud");
             String organizacion = datos.getString("organizacion");
 
-            tituloView.setText("Título:\n" + titulo);
-            descripcionView.setText("Descripción:\n" + descripcion);
-            organizacionView.setText("Organización: " + organizacion);
+            tituloView.setText(titulo);
+            descripcionView.setText(descripcion);
+            organizacionView.setText(organizacion);
         }
 
     }

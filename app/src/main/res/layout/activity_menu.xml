@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_weight="1"
-    android:background="@color/color_fondos_claro">
+    android:background="@color/color_fondos_oscuro">
 
     <TextView
         android:id="@+id/textView"
