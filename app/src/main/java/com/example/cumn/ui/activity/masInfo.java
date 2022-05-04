@@ -26,6 +26,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
@@ -105,7 +106,13 @@ public class masInfo extends AppCompatActivity implements OnMapReadyCallback{
 
     @Override
     public void onMapReady(GoogleMap map) {
+        LatLng cali = new LatLng(latitud, longitud);
         map.addMarker(new MarkerOptions().position(new LatLng(latitud, longitud)).title("Es aqui"));
+        CameraPosition cameraPosition = CameraPosition.builder()
+                .target(cali)
+                .zoom(10)
+                .build();
+        map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
     @Override
