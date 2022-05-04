@@ -63,6 +63,15 @@ public class masInfo extends AppCompatActivity implements OnMapReadyCallback{
             organizacionView.setText(organizacion);
         }
 
+
+        SupportMapFragment mapFragment = SupportMapFragment.newInstance();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.mapita, mapFragment)
+                .commit();
+
+
+
     }
 
     @Override
