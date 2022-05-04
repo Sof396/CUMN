@@ -10,5 +10,8 @@
     <string name="tituloDeportes">DEPORTES</string>
     <string name="tituloBibliotecas">BIBLIOTECAS</string>
     <string name="tituloEventos">EVENTOS</string>
+    <string name="titulo">Titulo</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="organizacion">Organizacion</string>
 
 </resources>

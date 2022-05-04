@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.CUMN" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/color_primario</item>
+        <item name="colorPrimary">@color/color_primario_claro</item>
         <item name="colorPrimaryDark">@color/color_primario_oscuro</item>
         <item name="colorAccent">@color/color_secundario_oscuro</item>
         <!-- Customize your theme here. -->
