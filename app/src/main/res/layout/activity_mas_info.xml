@@ -14,7 +14,7 @@
         android:layout_height="62dp"
         android:text="Titulo"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -25,10 +25,10 @@
     <TextView
         android:id="@+id/masInfoDescripcion"
         android:layout_width="327dp"
-        android:layout_height="151dp"
+        android:layout_height="89dp"
         android:text="Descripcion"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
@@ -42,18 +42,18 @@
         android:layout_height="47dp"
         android:text="Organizacion"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/mapita"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
-        app:layout_constraintVertical_bias="0.621"></TextView>
+        app:layout_constraintVertical_bias="0.661"></TextView>
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapita"
-        android:layout_width="385dp"
-        android:layout_height="208dp"
+        android:layout_width="381dp"
+        android:layout_height="295dp"
         android:apiKey="AIzaSyA9q_qT_bFsUqIwQyIdylfOx2uP5OWQdt0"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,8 +61,7 @@
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
-        app:layout_constraintVertical_bias="0.905"
-        />
+        app:layout_constraintVertical_bias="0.905" />
 
     <TextView
         android:id="@+id/textView5"
