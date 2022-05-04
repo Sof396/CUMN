@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="color_primario_oscuro">#EA5C2B</color>
-    <color name="color_primario_claro">#F6D860</color>
-    <color name="color_primario">#FF7F3F</color>
-    <color name="color_secundario_oscuro">#95CD41</color>
-    <color name="color_secundario_claro">#97e71f</color>
+    <color name="color_primario_claro">#E8F9FD</color>
+    <color name="color_primario_oscuro">#79DAE8</color>
+    <color name="color_secundario_claro">#0AA1DD</color>
+    <color name="color_secundario_oscuro">#2155CD</color>
 
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#AC7D88</color>
-    <color name="purple_700">#85586F</color>
-    <color name="teal_200">#EEB6AB</color>
-    <color name="Beige_700">#DEB6AB</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#F8ECD1</color>
+
+    <color name="azul_oscuro">#22577A</color>
+    <color name="verde_azulado">#38A3A5</color>
+    <color name="verde_oscuro">#57CC99</color>
+    <color name="verde_fosforito">#80ED99</color>
+
+    <color name="color_fondos_claro">#ECF4F3</color>
+    <color name="color_fondos_oscuro">#D2FAFB</color>
+    <color name="color_complementario">#6BC5D2</color>
+    <color name="color_textos">#105E62</color>
+    <color name="color_titulos">#B5525C</color>
 </resources>

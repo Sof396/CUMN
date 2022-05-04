@@ -32,6 +32,8 @@
         android:id="@+id/mapita"
         android:layout_width="331dp"
         android:layout_height="266dp"
+        android:apiKey="AIzaSyAx28OEv8IwAP8anR2-fca9u_SOtAKQTig"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity"
-    android:background="#03DAC6">
+    android:background="@color/color_fondos_claro">
 
     <TextView
         android:id="@+id/titulo"
@@ -13,16 +13,18 @@
         android:layout_height="80dp"
         android:gravity="center"
         android:text="@string/tituloEventos"
-        android:background="@drawable/background"
+        android:background="@color/color_fondos_oscuro"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold"
+        android:textColor="@color/color_textos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_actividades_Eventos"

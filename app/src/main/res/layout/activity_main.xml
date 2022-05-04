@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity"
-    android:background="@color/color_secundario_claro">
+    android:background="@color/color_fondos_oscuro">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bienvenido"
-        android:textColor="@color/color_primario_oscuro"
+        android:textColor="@color/color_textos"
         android:textStyle="bold"
         android:textAlignment="center"
         android:gravity="center"

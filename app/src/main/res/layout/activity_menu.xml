@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    android:background="@color/color_fondos_claro">
 
     <TextView
         android:id="@+id/textView"
@@ -17,7 +18,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         android:textSize="27dp"
-        android:textColor="@color/color_primario_oscuro"
+        android:textColor="@color/color_textos"
         android:text="@string/titulo_categorías"/>
 
     <LinearLayout
@@ -46,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:baselineAligned="false"
                 android:text="@string/Ocio"
-                android:textColor="@color/color_primario_oscuro"
+                android:textColor="@color/color_textos"
                 android:padding="10dp"/>
 
         </LinearLayout>
@@ -66,7 +67,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/color_primario_oscuro"
+                android:textColor="@color/color_textos"
                 android:text="@string/Deportes"
                 android:padding="10dp"/>
         </LinearLayout>
@@ -94,7 +95,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/color_primario_oscuro"
+                android:textColor="@color/color_textos"
                 android:text="@string/Bibliotecas"
                 android:padding="10dp"/>
 
@@ -119,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Eventos"
-                android:textColor="@color/color_primario_oscuro"
+                android:textColor="@color/color_textos"
                 android:padding="10dp"/>
         </LinearLayout>
 
