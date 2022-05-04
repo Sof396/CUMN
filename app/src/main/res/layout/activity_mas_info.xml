@@ -10,17 +10,17 @@
 
     <TextView
         android:id="@+id/masInfoTitulo"
-        android:layout_width="329dp"
-        android:layout_height="54dp"
+        android:layout_width="328dp"
+        android:layout_height="62dp"
         android:text="Titulo"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.124" />
 
     <TextView
         android:id="@+id/masInfoDescripcion"
@@ -48,20 +48,21 @@
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
-        app:layout_constraintVertical_bias="0.714"></TextView>
+        app:layout_constraintVertical_bias="0.621"></TextView>
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapita"
-        android:layout_width="331dp"
-        android:layout_height="150dp"
-        android:apiKey="AIzaSyAx28OEv8IwAP8anR2-fca9u_SOtAKQTig"
+        android:layout_width="385dp"
+        android:layout_height="208dp"
+        android:apiKey="AIzaSyA9q_qT_bFsUqIwQyIdylfOx2uP5OWQdt0"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintVertical_bias="0.905"
+        />
 
     <TextView
         android:id="@+id/textView5"
@@ -73,7 +74,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/masInfoTitulo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -86,10 +87,10 @@
         android:background="@color/color_secundario_oscuro"
         app:layout_constraintBottom_toTopOf="@+id/masInfoTitulo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView6"
@@ -127,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/masInfoDescripcion"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.311" />
 
     <View
         android:id="@+id/divider5"

@@ -13,5 +13,6 @@
     <string name="titulo">Titulo</string>
     <string name="descripcion">Descripcion</string>
     <string name="organizacion">Organizacion</string>
+    <string name="google_maps_key">AIzaSyA9q_qT_bFsUqIwQyIdylfOx2uP5OWQdt0</string>
 
 </resources>
