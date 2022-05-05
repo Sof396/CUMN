@@ -161,7 +161,7 @@ public class masInfo extends AppCompatActivity implements OnMapReadyCallback{
 
         int height = 100;
         int width = 100;
-        BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.a106128);
+        BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.abcd);
         Bitmap b = bitmapdraw.getBitmap();
         Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
         map.addMarker(new MarkerOptions().position(new LatLng(latitude,longitude)).title("Tu estas aqui").icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
