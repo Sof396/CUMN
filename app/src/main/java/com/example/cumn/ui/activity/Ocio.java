@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +43,37 @@ public class Ocio extends AppCompatActivity implements Callback<Models>{
 
         //Asociamos al layout correspondiente
         setContentView(R.layout.activity_ocio);
+
+        ImageView botonOcio = findViewById(R.id.Ocio);
+        ImageView botonDeportes = findViewById(R.id.Deportes);
+        ImageView botonBiblio = findViewById(R.id.Bibliotecas);
+        ImageView botonEventos = findViewById(R.id.Eventos);
+        ImageView botonMenu = findViewById(R.id.Menu);
+
+        botonOcio.setOnClickListener(view -> {
+            Intent intentOcio = new Intent(Ocio.this, Ocio.class);
+            startActivity(intentOcio);
+        });
+
+        botonDeportes.setOnClickListener(view -> {
+            Intent intentDeportes = new Intent(Ocio.this, Deportes.class);
+            startActivity(intentDeportes);
+        });
+
+        botonBiblio.setOnClickListener(view -> {
+            Intent intentBiblio = new Intent(Ocio.this, Bibliotecas.class);
+            startActivity(intentBiblio);
+        });
+
+        botonEventos.setOnClickListener(view -> {
+            Intent intentEventos = new Intent(Ocio.this, Eventos.class);
+            startActivity(intentEventos);
+        });
+
+        botonEventos.setOnClickListener(view -> {
+            Intent intentEventos = new Intent(Ocio.this, MenuPrincipal.class);
+            startActivity(intentEventos);
+        });
 
         Toast.makeText(this, "Ocio" , Toast.LENGTH_LONG).show();
 
