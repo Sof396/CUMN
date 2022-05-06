@@ -71,8 +71,8 @@ public class Ocio extends AppCompatActivity implements Callback<Models>{
         });
 
         botonEventos.setOnClickListener(view -> {
-            Intent intentEventos = new Intent(Ocio.this, MenuPrincipal.class);
-            startActivity(intentEventos);
+            Intent intentMenuPrincipal = new Intent(Ocio.this, MenuPrincipal.class);
+            startActivity(intentMenuPrincipal);
         });
 
         Toast.makeText(this, "Ocio" , Toast.LENGTH_LONG).show();

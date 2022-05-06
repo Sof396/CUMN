@@ -22,13 +22,87 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_actividades_deportes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="581dp"
         android:background="@drawable/mitad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lista_actividades_deportes">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="11sp">
+
+            <ImageView
+                android:id="@+id/Ocio"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ocio" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="11sp">
+
+            <ImageView
+                android:id="@+id/Deportes"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/deportes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="11sp">
+
+            <ImageView
+                android:id="@+id/Menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="11sp">
+            <ImageView
+                android:id="@+id/Bibliotecas"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/biblioteca" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="11sp">
+
+            <ImageView
+                android:id="@+id/Eventos"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/eventos" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

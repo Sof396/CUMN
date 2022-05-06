@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.cumn.R;
@@ -30,6 +32,37 @@ public class Bibliotecas extends AppCompatActivity implements Callback<Models>{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bibliotecas);
+
+        ImageView botonOcio = findViewById(R.id.Ocio);
+        ImageView botonDeportes = findViewById(R.id.Deportes);
+        ImageView botonBiblio = findViewById(R.id.Bibliotecas);
+        ImageView botonEventos = findViewById(R.id.Eventos);
+        ImageView botonMenu = findViewById(R.id.Menu);
+
+        botonOcio.setOnClickListener(view -> {
+            Intent intentOcio = new Intent(Bibliotecas.this, Ocio.class);
+            startActivity(intentOcio);
+        });
+
+        botonDeportes.setOnClickListener(view -> {
+            Intent intentDeportes = new Intent(Bibliotecas.this, Deportes.class);
+            startActivity(intentDeportes);
+        });
+
+        botonBiblio.setOnClickListener(view -> {
+            Intent intentBiblio = new Intent(Bibliotecas.this, Bibliotecas.class);
+            startActivity(intentBiblio);
+        });
+
+        botonEventos.setOnClickListener(view -> {
+            Intent intentEventos = new Intent(Bibliotecas.this, Eventos.class);
+            startActivity(intentEventos);
+        });
+
+        botonEventos.setOnClickListener(view -> {
+            Intent intentMenuPrincipal = new Intent(Bibliotecas.this, MenuPrincipal.class);
+            startActivity(intentMenuPrincipal);
+        });
 
         Toast.makeText(this, "Bibliotecas" , Toast.LENGTH_LONG).show();
 
