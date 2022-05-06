@@ -58,7 +58,7 @@ public class Eventos extends AppCompatActivity implements  Callback<Models>{
             startActivity(intentEventos);
         });
 
-        botonEventos.setOnClickListener(view -> {
+        botonMenu.setOnClickListener(view -> {
             Intent intentMenuPrincipal = new Intent(Eventos.this, MenuPrincipal.class);
             startActivity(intentMenuPrincipal);
         });

@@ -57,7 +57,7 @@ public class Deportes extends AppCompatActivity implements Callback<Models> {
             startActivity(intentEventos);
         });
 
-        botonEventos.setOnClickListener(view -> {
+        botonMenu.setOnClickListener(view -> {
             Intent intentMenuPrincipal = new Intent(Deportes.this, MenuPrincipal.class);
             startActivity(intentMenuPrincipal);
         });

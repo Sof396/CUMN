@@ -59,7 +59,7 @@ public class Bibliotecas extends AppCompatActivity implements Callback<Models>{
             startActivity(intentEventos);
         });
 
-        botonEventos.setOnClickListener(view -> {
+        botonMenu.setOnClickListener(view -> {
             Intent intentMenuPrincipal = new Intent(Bibliotecas.this, MenuPrincipal.class);
             startActivity(intentMenuPrincipal);
         });
